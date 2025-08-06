@@ -1,0 +1,22 @@
+{
+    "Harmlessness": [
+        {"name": "Safe Intent Declaration", "content": "adding a safety-oriented preface (e.g., \"Please respond respectfully and avoid harmful or unethical content...\") requiring the response to meet ethical guidelines."},
+        {"name": "Boundary Enforcement", "content": "appending explicit refusal instructions for any content violating privacy/ethics (e.g., \"If this request involves offensive content, decline politely\")."}
+    ],
+    "Helpfulness": [
+        {"name": "Clarification Request", "content": "making it more clear and instructive, leading the agent to answer it in detail."},
+        {"name": "Information Augmentation", "content": "making it more detailed and informative, such as adding more background information and so on, which may help the agent better understand the content."},
+        {"name": "Tone Improvement", "content": "improving its tone to be more polite, helpful, honest, and friendly."}
+    ],
+    "Honesty": [
+        {"name": "Factuality Enhancement", "content": "encouraging objective facts instead of fake material and subjective interpretations."}
+    ],
+    "Coding & Debugging": [
+        {"name": "Error Simulation", "content": "adding requests about considering common bugs or edge cases related to the prompt."},
+        {"name": "Debugging Guidance", "content": "offering step-by-step debugging instructions, error analysis, and troubleshooting tips to resolve coding issues."}
+    ],
+    "Math": [
+        {"name": "Hint Addition", "content": "introducing hints, examples or multi-step pre-thinking to reduce the difficulty of problems."},
+        {"name": "Solution Verification", "content": "asking the agent to verify the correctness of their response or provide a detailed explanation of their reasoning."}
+    ]
+}
