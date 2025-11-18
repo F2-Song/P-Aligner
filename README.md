@@ -1,5 +1,5 @@
 <h1 align="center">
-    <br>P-Aligner: Enabling Pre-Alignment of Language Models via Principled Instruction Synthesis
+    <br>P-Aligner: Pre-Aligning LLMs via Principled Instruction Synthesis
 </h1>
 <p align="center">
     <a href="https://arxiv.org/abs/2508.04626">
@@ -25,7 +25,11 @@
 
 ## Overview
 
-Large Language Models (LLMs) are expected to produce safe, helpful, and honest content during interaction with human users, but they frequently fail to align with such values when given flawed instructions, e.g., missing context, ambiguous directives, or inappropriate tone, leaving substantial room for improvement along multiple dimensions. A cost-effective yet high-impact way is to pre-align instructions before the model begins decoding. Existing approaches either rely on prohibitive test-time search costs or end-to-end model rewrite, which is powered by a customized training corpus with unclear objectives. In this work, we demonstrate that the goal of efficient and effective preference alignment can be achieved by P-Aligner, a lightweight module generating instructions that preserve the original intents while being expressed in a more human-preferred form. P-Aligner is trained on UltraPrompt, a new dataset synthesized via a proposed principle-guided pipeline using Monte-Carlo Tree Search, which systematically explores the space of candidate instructions that are closely tied to human preference. Experiments across different methods show that P-Aligner generally outperforms strong baselines across various models and benchmarks, including average win-rate gains of 28.35% and 8.69% on GPT-4-turbo and Gemma-2-SimPO, respectively. Further analyses validate its effectiveness and efficiency through multiple perspectives, including data quality, search strategies, iterative deployment, and time overhead.
+Large Language Models (LLMs) can fail to align with human preference on flawed instructions, leaving large room for improvement along multiple dimensions via pre-aligning instructions before normal decoding. Current methods rely on high test-time search costs, or end-to-end but unclear rewrite. In this work, we show that efficient and effective preference alignment can be achieved by P-Aligner, a lightweight module generating instructions which hold the original intents while being expressed in a human-preferred way. It is trained on UltraPrompt, a dataset synthesized via our proposed principle-guided pipeline using Monte-Carlo Tree Search, exploring candidate instructions that closely tied to human preference. Experiments show that it beats baselines across various models and benchmarks, including win-rate gains of 28.35% and 8.69% on GPT-4-turbo and Gemma-2-SimPO, respectively. More analyses validate its effectiveness and efficiency from multiple perspectives, like data quality, search strategies and time overhead.
+
+## More information
+
+Due to space limitations, we include additional information related to P-Aligner in the repository. These materials includes iterative-optimization experiments, dataset details, principle definitions, more experimental configurations, prompt templates, and representative cases, which are supplementary and do not affect the self-contained nature of the main paper. Please refer to [**our technical appendix**](https://github.com/F2-Song/P-Aligner/appendix.pdf) for these details.
 
 ## Easy Start
 We provide scripts of instruction synthesis and P-Aligner inference for easy start.
@@ -51,16 +55,3 @@ After the synthesis processes end, just run `prepare_data.py` and `prepare_step_
 We deeply thank you for your recognition on our work. 
 
 Before scanning all material or running any code, please bear in mind that this project inevitably contains sensitive content and you should be well-prepared to have access to it. For example, the data used in evaluation and UltraPrompt may include unsafe information, such as misleading content or offensive instructions. Such content does not represent our attitudes, and should be handled carefully to avoid potential harm. We request you and any other potential users treat it responsibly without any use or distribution outside of research contexts.
-
-## Citation
-If you find this work useful, please consider citing:
-```
-@misc{song2025paligner,
-  title={P-Aligner: Enabling Pre-Alignment of Language Models via Principled Instruction Synthesis},
-  author={Song, Feifan and Gao, Bofei and Song, Yifan and Liu, Yi and Xiong, Weimin and Song, Yuyang and Liu, Tianyu and Wang, Guoyin and Wang, Houfeng},
-  year={2025},
-  eprint={2508.04626},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL}
-}
-```
