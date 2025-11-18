@@ -29,7 +29,7 @@ Large Language Models (LLMs) can fail to align with human preference on flawed i
 
 ## More information
 
-Due to space limitations, we include additional information related to P-Aligner in the repository. These materials includes iterative-optimization experiments, dataset details, principle definitions, more experimental configurations, prompt templates, and representative cases, which are supplementary and do not affect the self-contained nature of the main paper. Please refer to [**our technical appendix**](https://github.com/F2-Song/P-Aligner/appendix.pdf) for these details.
+Due to space limitations, we include additional information related to P-Aligner in the repository. These materials includes iterative-optimization experiments, dataset details, principle definitions, more experimental configurations, prompt templates, and representative cases, which are supplementary and do not affect the self-contained nature of the main paper. Please refer to [**our technical appendix**](https://github.com/F2-Song/P-Aligner/blob/main/technical_report.pdf) for these details.
 
 ## Easy Start
 We provide scripts of instruction synthesis and P-Aligner inference for easy start.
